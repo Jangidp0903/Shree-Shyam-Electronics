@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Herpsection from "../components/HeroSection";
+import AboutSection from "@/components/AboutSection";
 
 const page = () => {
   return (
@@ -9,11 +11,8 @@ const page = () => {
           <Herpsection />
         </section>
 
-        <section
-          id="about"
-          className="h-screen bg-gray-200 flex items-center justify-center"
-        >
-          <h1 className="text-4xl font-bold">About Section</h1>
+        <section id="about">
+          <AboutSection />
         </section>
 
         <section

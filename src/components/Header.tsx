@@ -113,8 +113,8 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Desktop navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Desktop navigation - Centered using mx-auto */}
+          <nav className="hidden md:flex space-x-8 mx-auto">
             {navItems.map((item) => (
               <button
                 key={item.name}
@@ -131,6 +131,14 @@ const Header: React.FC = () => {
               </button>
             ))}
           </nav>
+
+          {/* Download Button - Updated with orange and white theme */}
+          <div className="hidden md:block">
+            <button className="rounded cursor-pointer px-5 py-2.5 overflow-hidden group bg-orange-500 relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-orange-400 transition-all ease-out duration-300">
+              <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+              <span className="relative">Download</span>
+            </button>
+          </div>
 
           {/* Mobile menu button with custom SVG */}
           <div className="md:hidden">
@@ -208,6 +216,11 @@ const Header: React.FC = () => {
                 {item.name}
               </button>
             ))}
+            {/* Download Button in Mobile Menu - Updated with orange and white theme */}
+            <button className="mt-2 w-full rounded cursor-pointer px-5 py-2.5 overflow-hidden group bg-orange-500 relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-orange-400 transition-all ease-out duration-300">
+              <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+              <span className="relative">Download</span>
+            </button>
           </div>
         </div>
       </div>
