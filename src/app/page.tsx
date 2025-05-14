@@ -4,6 +4,7 @@ import Herpsection from "../components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ServiceSection from "@/components/ServiceSection";
 import BenefitSections from "@/components/BenefitSections";
+import ImageData from "@/components/ImageData";
 
 const page = () => {
   return (
@@ -27,6 +28,11 @@ const page = () => {
         {/* Benefits Section */}
         <section id="benefits">
           <BenefitSections />
+        </section>
+
+        {/* Image Section */}
+        <section id="images">
+          <ImageData />
         </section>
 
         {/* Repair Section */}
