@@ -71,6 +71,33 @@ const Header: React.FC = () => {
     };
   }, [isOpen]);
 
+  // Mobile menu backdrop handler - close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+
+      if (
+        isOpen &&
+        mobileMenu &&
+        !mobileMenu.contains(target) &&
+        mobileMenuButton &&
+        !mobileMenuButton.contains(target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -115,12 +142,12 @@ const Header: React.FC = () => {
           </div>
 
           {/* Desktop navigation - Centered using mx-auto */}
-          <nav className="hidden md:flex space-x-8 mx-auto">
+          <nav className="hidden md:flex space-x-4 lg:space-x-8 mx-auto">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.href)}
-                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 bg-transparent border-none cursor-pointer ${
+                className={`px-2 lg:px-3 py-2 text-xs lg:text-sm font-medium transition-colors duration-200 bg-transparent border-none cursor-pointer ${
                   activeSection === item.href
                     ? "text-orange-500 font-bold border-b-2 border-orange-500"
                     : "text-gray-600 hover:text-orange-500"
@@ -135,7 +162,7 @@ const Header: React.FC = () => {
 
           {/* Download Button - Updated with orange and white theme */}
           <div className="hidden md:block">
-            <button className="rounded cursor-pointer px-5 py-2.5 overflow-hidden group bg-orange-500 relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-orange-400 transition-all ease-out duration-300">
+            <button className="rounded cursor-pointer px-3 lg:px-5 py-2 lg:py-2.5 text-sm overflow-hidden group bg-orange-500 relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-orange-400 transition-all ease-out duration-300">
               <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
               <span className="relative">Download</span>
             </button>
@@ -144,6 +171,7 @@ const Header: React.FC = () => {
           {/* Mobile menu button with custom SVG */}
           <div className="md:hidden">
             <button
+              id="mobile-menu-button"
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-orange-500 hover:text-orange-700 focus:outline-none transition-colors duration-300"
               aria-expanded={isOpen}
@@ -179,9 +207,10 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile menu - Now with 80% width instead of full width */}
+      {/* Mobile menu - 80% width on small screens, 60% on medium */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 md:hidden w-4/5 transition-transform duration-300 ease-in-out ${
+        id="mobile-menu"
+        className={`fixed inset-y-0 left-0 z-50 md:hidden w-4/5 sm:w-3/5 transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -193,11 +222,32 @@ const Header: React.FC = () => {
                 src={Logo}
                 alt="SSE Logo"
                 className="rounded-full mr-2"
-                width={48}
-                height={48}
+                width={40}
+                height={40}
                 priority
               />
             </div>
+            {/* Close button */}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="p-2 rounded-full text-gray-500 hover:bg-gray-100"
+              aria-label="Close menu"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
           </div>
 
           {/* Mobile menu content */}
@@ -218,7 +268,7 @@ const Header: React.FC = () => {
               </button>
             ))}
             {/* Download Button in Mobile Menu - Updated with orange and white theme */}
-            <button className="mt-2 w-full rounded cursor-pointer px-5 py-2.5 overflow-hidden group bg-orange-500 relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-orange-400 transition-all ease-out duration-300">
+            <button className="mt-6 w-full rounded cursor-pointer px-5 py-3 overflow-hidden group bg-orange-500 relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-orange-400 transition-all ease-out duration-300">
               <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
               <span className="relative">Download</span>
             </button>

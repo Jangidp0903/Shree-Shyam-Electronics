@@ -2,9 +2,8 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 // Define animations using CSS
-
-const HeroSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
+const HeroSection: React.FC = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
     // Set animation visibility after component mounts for entry animations
@@ -12,7 +11,10 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex justify-center items-center py-16 overflow-hidden">
+    <section
+      id="home"
+      className="relative w-full min-h-screen flex justify-center items-center py-4 sm:py-6 md:py-12 overflow-hidden"
+    >
       <style>{`
         @keyframes float {
           0%,
@@ -52,7 +54,7 @@ const HeroSection = () => {
         }
       `}</style>
 
-      <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12">
+      <div className="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
         {/* Text Content */}
         <div
           className={`flex flex-col justify-center transform transition-all duration-1000 ease-out ${
@@ -63,20 +65,20 @@ const HeroSection = () => {
         >
           {/* Badge */}
           <div
-            className={`mb-4 transition-all duration-700 delay-300 ${
+            className={`mb-3 sm:mb-4 transition-all duration-700 delay-300 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
             }`}
           >
-            <span className="inline-block text-sm sm:text-base rounded-lg font-bold text-white px-4 py-1 bg-orange-600">
+            <span className="inline-block text-xs sm:text-sm md:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-600">
               Digital E-Book
             </span>
           </div>
 
           {/* Heading */}
           <h1
-            className={`text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-6 font-bold text-blue-950 transition-all duration-700 delay-500 ${
+            className={`text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-4 sm:mb-6 font-bold text-blue-950 transition-all duration-700 delay-500 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
@@ -88,7 +90,7 @@ const HeroSection = () => {
 
           {/* Description */}
           <p
-            className={`text-sm md:text-base lg:text-lg text-gray-700 mb-8 max-w-xl transition-all duration-700 delay-700 ${
+            className={`text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 mb-6 sm:mb-8 max-w-xl transition-all duration-700 delay-700 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
@@ -110,12 +112,12 @@ const HeroSection = () => {
           >
             <button
               type="button"
-              className="relative cursor-pointer inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-orange-600 transition-all duration-300 ease-in-out rounded hover:pl-10 hover:pr-6 bg-white border border-orange-300 group"
+              className="relative cursor-pointer inline-flex items-center justify-start py-2 sm:py-3 pl-3 sm:pl-4 pr-10 sm:pr-12 overflow-hidden font-semibold text-orange-600 transition-all duration-300 ease-in-out rounded hover:pl-8 sm:hover:pl-10 hover:pr-4 sm:hover:pr-6 bg-white border border-orange-300 group text-xs sm:text-sm md:text-base"
             >
               <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-300 ease-in-out bg-orange-600 group-hover:h-full"></span>
-              <span className="absolute right-0 pr-4 duration-300 ease-out group-hover:translate-x-12">
+              <span className="absolute right-0 pr-3 sm:pr-4 duration-300 ease-out group-hover:translate-x-12">
                 <svg
-                  className="w-5 h-5 text-orange-600"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -129,9 +131,9 @@ const HeroSection = () => {
                   ></path>
                 </svg>
               </span>
-              <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-300">
+              <span className="absolute left-0 pl-2 sm:pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-300">
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -158,7 +160,7 @@ const HeroSection = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <div className="relative w-full max-w-md mx-auto">
+          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
             {/* Animated floating effect for the image */}
             <div className="float-animation">
               <Image
