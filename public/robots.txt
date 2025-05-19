@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://shree-shyam-electronics.vercel.app
+
+# Sitemaps
+Sitemap: https://shree-shyam-electronics.vercel.app/sitemap.xml
