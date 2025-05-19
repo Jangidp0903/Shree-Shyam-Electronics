@@ -43,7 +43,7 @@ const ContactSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-            Get In Touch
+            Need Fast Appliance Repair?
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             We&apos;d love to hear from you! Reach out to us through any of the
@@ -99,8 +99,10 @@ const ContactSection: React.FC = () => {
               Ready to Start a Conversation?
             </h3>
             <p className="text-gray-600 mb-6 text-sm sm:text-base px-4">
-              Don&apos;t hesitate to reach out to us. We&apos;re here to help
-              and would love to discuss your needs.
+              Whether it’s your fridge, washing machine, or microwave — our
+              expert technicians are just a call or message away. Contact us
+              today for reliable and affordable repair services at your
+              doorstep.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a

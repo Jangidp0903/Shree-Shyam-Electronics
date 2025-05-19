@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 font-bold text-blue-950">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl mb-4 sm:mb-6 font-bold text-blue-950">
               Affordable & Reliable Appliance Repair Services{" "}
               <span className="text-orange-500">
                 for Washing Machines, Fridges & More
@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
               <Image
                 src={Hero as StaticImageData}
                 alt="Technician providing reliable home appliance repair service"
-                width={500}
+                width={400}
                 height={600}
                 layout="responsive"
                 className="rounded-t-full shadow-lg object-cover"

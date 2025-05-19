@@ -20,44 +20,50 @@ const imageData: ImageCardType[] = [
   {
     id: 1,
     image:
-      "https://images.pexels.com/photos/28232327/pexels-photo-28232327/free-photo-of-angry-bird-look.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Sunset View",
-    description: "Aesthetically Pleasing",
+      "https://images.pexels.com/photos/3736451/pexels-photo-3736451.jpeg?auto=compress&cs=tinysrgb&w=600",
+    title: "Fridge Cooling Issue",
+    description:
+      "We fix cooling problems, gas leaks, and compressor issues in all fridge models.",
   },
   {
     id: 2,
     image:
-      "https://images.pexels.com/photos/17709384/pexels-photo-17709384/free-photo-of-tabby-cat-lying-outdoors.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Forest Path",
-    description: "Nature",
+      "https://images.pexels.com/photos/4472073/pexels-photo-4472073.jpeg?auto=compress&cs=tinysrgb&w=600",
+    title: "Fridge Not Turning On",
+    description:
+      "Door seal issues, wiring faults, or thermostat repair — we've got you covered.",
   },
   {
     id: 3,
     image:
-      "https://images.pexels.com/photos/15306832/pexels-photo-15306832/free-photo-of-close-up-of-a-head-of-a-bird.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Winter Portrait",
-    description: "Portrait",
+      "https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&w=600",
+    title: "Washing Machine Repair",
+    description:
+      "From drum not spinning to water leakage – we repair all models efficiently.",
   },
   {
     id: 4,
     image:
-      "https://images.pexels.com/photos/5667445/pexels-photo-5667445.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Golden Gate",
-    description: "Architecture/Landmark",
+      "https://images.pexels.com/photos/3999778/pexels-photo-3999778.jpeg?auto=compress&cs=tinysrgb&w=600",
+    title: "Washing Machine Noise Issue",
+    description:
+      "Strange noise? Vibration? We fix motor, bearings, and balance problems.",
   },
   {
     id: 5,
     image:
-      "https://images.pexels.com/photos/11416418/pexels-photo-11416418.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Wildlife",
-    description: "Nature/Animals",
+      "https://images.pexels.com/photos/6249723/pexels-photo-6249723.jpeg?auto=compress&cs=tinysrgb&w=600",
+    title: "Microwave Heating Problem",
+    description:
+      "No heating or uneven heating? We fix magnetron, capacitor, and other issues.",
   },
   {
     id: 6,
     image:
-      "https://images.pexels.com/photos/9321458/pexels-photo-9321458.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Vintage Car",
-    description: "Aesthetic/Transport",
+      "https://images.pexels.com/photos/6617392/pexels-photo-6617392.jpeg?auto=compress&cs=tinysrgb&w=600",
+    title: "Microwave Door or Panel Repair",
+    description:
+      "We repair broken doors, buttons, panels, and provide genuine replacement parts.",
   },
 ];
 
@@ -96,12 +102,12 @@ const ImageGallery: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Premium Photography
+              Fridge, Washing Machine & Microwave Repair
             </h1>
             <div className="h-1 w-20 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto rounded-full mb-4"></div>
             <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              Explore our collection of stunning high-quality images for all
-              your creative needs
+              Fast, reliable, and affordable repair service at your doorstep for
+              all major home appliances. Book a technician today!
             </p>
           </div>
         </div>

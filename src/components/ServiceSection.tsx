@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  Fingerprint,
-  Shield,
-  MessageCircle,
-  Bell,
-  Wifi,
-  Watch,
+  Snowflake,
+  Droplet,
+  Zap,
+  Wrench,
+  ShieldCheck,
+  Clock,
 } from "lucide-react";
 
 // Define TypeScript interface for service items
@@ -18,51 +18,49 @@ interface ServiceItem {
 // Updated services array with proper icons (removed delay values)
 const services: ServiceItem[] = [
   {
-    title: "Touch to buy",
+    title: "Fridge Repair",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.",
+      "We handle all kinds of fridge issues including cooling problems, gas refilling, and compressor repair.",
     icon: (
-      <Fingerprint className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
+      <Snowflake className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
     ),
   },
   {
-    title: "Secure Data",
+    title: "Washing Machine Repair",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.",
+      "Expert repair services for top-load, front-load, and semi-automatic washing machines.",
     icon: (
-      <Shield className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
+      <Droplet className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
     ),
   },
   {
-    title: "Instant Chat",
+    title: "Microwave Repair",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.",
+      "We fix heating issues, plate rotation problems, and other electrical faults in all types of microwaves.",
+    icon: <Zap className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />,
+  },
+  {
+    title: "Quick Diagnosis",
+    description:
+      "Our technicians quickly identify the problem and suggest the best possible repair solution.",
     icon: (
-      <MessageCircle className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
+      <Wrench className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
     ),
   },
   {
-    title: "Live Notification",
+    title: "Genuine Spare Parts",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.",
+      "We only use original and branded spare parts to ensure long-lasting performance.",
     icon: (
-      <Bell className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
+      <ShieldCheck className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
     ),
   },
   {
-    title: "Wifi Support",
+    title: "On-Time Service",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.",
+      "We value your time – that’s why we guarantee fast and punctual repair services at your doorstep.",
     icon: (
-      <Wifi className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
-    ),
-  },
-  {
-    title: "App Watch",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa expedita dignissimos.",
-    icon: (
-      <Watch className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
+      <Clock className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
     ),
   },
 ];

@@ -1,4 +1,4 @@
-import { Book, Zap, Leaf, Sparkles } from "lucide-react";
+import { Wrench, ShieldCheck, Timer, Smile } from "lucide-react";
 import React from "react";
 import Image from "next/image";
 
@@ -10,28 +10,28 @@ interface Benefit {
 
 const benefits: Benefit[] = [
   {
-    title: "Cost-Effective Option",
+    title: "Affordable Repairs",
     description:
-      "Ebooks typically come at a lower price point compared to printed books, making them accessible to a broader audience of readers.",
-    icon: <Book className="w-8 h-8 text-orange-500" />,
+      "Get your fridge, washing machine, microwave, and more repaired at budget-friendly prices without compromising on quality.",
+    icon: <Wrench className="w-8 h-8 text-orange-500" />,
   },
   {
-    title: "Enhanced Visibility",
+    title: "Certified Technicians",
     description:
-      "Ebooks can be effortlessly searched and shared across the internet, enabling readers to discover new books more readily.",
-    icon: <Zap className="w-8 h-8 text-orange-500" />,
+      "Our expert technicians are trained and certified to repair all major brands, ensuring safe and professional service every time.",
+    icon: <ShieldCheck className="w-8 h-8 text-orange-500" />,
   },
   {
-    title: "Eco-Conscious Choice",
+    title: "Quick Turnaround",
     description:
-      "Ebooks are environmentally friendly as they are digital, eliminating the need for paper, ink, and sustainable option compared to print books.",
-    icon: <Leaf className="w-8 h-8 text-orange-500" />,
+      "We value your time — that's why we offer fast and efficient repair services with same-day or next-day service availability.",
+    icon: <Timer className="w-8 h-8 text-orange-500" />,
   },
   {
-    title: "Enhanced Convenience",
+    title: "Customer Satisfaction",
     description:
-      "Ebooks have the capacity to incorporate interactive features like videos, audio, and elevating the overall reading experience.",
-    icon: <Sparkles className="w-8 h-8 text-orange-500" />,
+      "Thousands of happy customers trust our reliable service. We strive to deliver 100% satisfaction with every repair job.",
+    icon: <Smile className="w-8 h-8 text-orange-500" />,
   },
 ];
 
@@ -50,13 +50,13 @@ const BenefitSections: React.FC = () => {
 
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-bold">
-          Discover the Benefits of Ebooks
+          Why Choose Our Repair Services?
         </h2>
 
         {/* Subheading */}
         <p className="text-gray-600 mt-3 max-w-xl mx-auto text-sm md:text-base">
-          Plus, enjoy the convenience of offline access to our ebooks, allowing
-          you to read at your convenience, anytime, and anywhere.
+          We provide fast, reliable, and affordable repair services for all your
+          home appliances — from refrigerators to washing machines and more.
         </p>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -86,7 +86,7 @@ const BenefitSections: React.FC = () => {
             <div className="relative h-full min-h-64 md:min-h-80 rounded-xl overflow-hidden">
               <Image
                 src="https://images.pexels.com/photos/29500254/pexels-photo-29500254/free-photo-of-classic-station-clock-in-indoor-setting.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                alt="Ebook Reader"
+                alt="Appliance Repair Service"
                 width={1000}
                 height={1000}
                 className="rounded-xl"
