@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import ServiceSection from "@/components/ServiceSection";
 import BenefitSections from "@/components/BenefitSections";
 import ImageData from "@/components/ImageData";
+import ContactSection from "@/components/ContactSection";
 
 const page = () => {
   return (
@@ -23,9 +24,10 @@ const page = () => {
         <BenefitSections />
 
         {/* Image Section */}
-        <section id="images">
-          <ImageData />
-        </section>
+        <ImageData />
+
+        {/* Contact Section */}
+        <ContactSection />
       </main>
     </>
   );

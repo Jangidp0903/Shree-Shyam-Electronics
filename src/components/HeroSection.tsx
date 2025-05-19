@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import Button from "./Button";
 
 // Define animations using CSS
 const HeroSection: React.FC = () => {
@@ -110,47 +111,7 @@ const HeroSection: React.FC = () => {
                 : "opacity-0 translate-y-4"
             }`}
           >
-            <button
-              type="button"
-              className="relative cursor-pointer inline-flex items-center justify-start py-2 sm:py-3 pl-3 sm:pl-4 pr-10 sm:pr-12 overflow-hidden font-semibold text-orange-600 transition-all duration-300 ease-in-out rounded hover:pl-8 sm:hover:pl-10 hover:pr-4 sm:hover:pr-6 bg-white border border-orange-300 group text-xs sm:text-sm md:text-base"
-            >
-              <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-300 ease-in-out bg-orange-600 group-hover:h-full"></span>
-              <span className="absolute right-0 pr-3 sm:pr-4 duration-300 ease-out group-hover:translate-x-12">
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  ></path>
-                </svg>
-              </span>
-              <span className="absolute left-0 pl-2 sm:pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-300">
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  ></path>
-                </svg>
-              </span>
-              <span className="relative w-full text-left transition-colors duration-300 ease-in-out group-hover:text-white">
-                Get Started
-              </span>
-            </button>
+            <Button text="Explore Now" />
           </div>
         </div>
 

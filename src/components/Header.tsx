@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Logo from "../../public/logo.png";
+import Button from "./Button";
 
 interface NavItem {
   name: string;
@@ -13,7 +14,6 @@ const navItems: NavItem[] = [
   { name: "About Us", href: "#about" },
   { name: "Services", href: "#services" },
   { name: "Benefits", href: "#benefits" },
-  { name: "Request a Repair", href: "#repair" },
   { name: "Contact Us", href: "#contact" },
 ];
 
@@ -162,10 +162,7 @@ const Header: React.FC = () => {
 
           {/* Download Button - Updated with orange and white theme */}
           <div className="hidden md:block">
-            <button className="rounded cursor-pointer px-3 lg:px-5 py-2 lg:py-2.5 text-sm overflow-hidden group bg-orange-500 relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-orange-400 transition-all ease-out duration-300">
-              <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-              <span className="relative">Download</span>
-            </button>
+            <Button text="Download" />
           </div>
 
           {/* Mobile menu button with custom SVG */}
@@ -247,10 +244,9 @@ const Header: React.FC = () => {
               </button>
             ))}
             {/* Download Button in Mobile Menu - Updated with orange and white theme */}
-            <button className="mt-6 w-full rounded cursor-pointer px-5 py-3 overflow-hidden group bg-orange-500 relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-orange-400 transition-all ease-out duration-300">
-              <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-              <span className="relative">Download</span>
-            </button>
+            <div className="w-full">
+              <Button text="Download" className="w-full" />
+            </div>
           </div>
         </div>
       </div>
