@@ -10,27 +10,27 @@ interface Benefit {
 
 const benefits: Benefit[] = [
   {
-    title: "Affordable Repairs",
+    title: "Affordable Home Appliance Repairs",
     description:
-      "Get your fridge, washing machine, microwave, and more repaired at budget-friendly prices without compromising on quality.",
+      "Book expert appliance repair for fridge, washing machine, or microwave at affordable prices. Reliable and efficient technicians at your doorstep.",
     icon: <Wrench className="w-8 h-8 text-orange-500" />,
   },
   {
-    title: "Certified Technicians",
+    title: "Certified & Verified Technicians",
     description:
-      "Our expert technicians are trained and certified to repair all major brands, ensuring safe and professional service every time.",
+      "Our skilled and certified technicians ensure professional service for all leading home appliance brands. Background-checked and experienced pros only.",
     icon: <ShieldCheck className="w-8 h-8 text-orange-500" />,
   },
   {
-    title: "Quick Turnaround",
+    title: "Quick Turnaround – Same Day Repair",
     description:
-      "We value your time — that's why we offer fast and efficient repair services with same-day or next-day service availability.",
+      "Experience fast home appliance repair with our same-day or next-day service. We value your time with hassle-free bookings and quick response.",
     icon: <Timer className="w-8 h-8 text-orange-500" />,
   },
   {
-    title: "Customer Satisfaction",
+    title: "Trusted by Thousands of Customers",
     description:
-      "Thousands of happy customers trust our reliable service. We strive to deliver 100% satisfaction with every repair job.",
+      "We have served thousands of happy households with reliable and honest appliance repair. Rated best for customer satisfaction and timely service.",
     icon: <Smile className="w-8 h-8 text-orange-500" />,
   },
 ];
@@ -43,20 +43,21 @@ const BenefitSections: React.FC = () => {
         <div className="mx-auto w-fit mb-4">
           <div className="mb-4">
             <span className="inline-block text-sm sm:text-base rounded-lg font-bold text-white px-4 py-1 bg-orange-600">
-              Benefits
+              Appliance Repair Benefits
             </span>
           </div>
         </div>
 
         {/* Heading */}
-        <h2 className="text-2xl md:text-3xl font-bold">
-          Why Choose Our Repair Services?
+        <h2 className="text-2xl md:text-3xl text-gray-800 font-bold">
+          Why Choose Our Certified Appliance Repair Services?
         </h2>
 
         {/* Subheading */}
         <p className="text-gray-600 mt-3 max-w-xl mx-auto text-sm md:text-base">
-          We provide fast, reliable, and affordable repair services for all your
-          home appliances — from refrigerators to washing machines and more.
+          We offer budget-friendly and professional repair services for your
+          home appliances like refrigerator, washing machine, and microwave —
+          with same-day service and verified technicians.
         </p>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -72,7 +73,7 @@ const BenefitSections: React.FC = () => {
                   {benefit.icon}
                 </div>
                 {/* Title */}
-                <h3 className="text-lg font-semibold mt-4 mb-2">
+                <h3 className="text-lg text-gray-800 font-semibold mt-4 mb-2">
                   {benefit.title}
                 </h3>
                 {/* Description */}
@@ -86,7 +87,7 @@ const BenefitSections: React.FC = () => {
             <div className="relative h-full min-h-64 md:min-h-80 rounded-xl overflow-hidden">
               <Image
                 src="https://images.pexels.com/photos/29500254/pexels-photo-29500254/free-photo-of-classic-station-clock-in-indoor-setting.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-                alt="Appliance Repair Service"
+                alt="Affordable home appliance repair service"
                 width={1000}
                 height={1000}
                 className="rounded-xl"
@@ -106,7 +107,7 @@ const BenefitSections: React.FC = () => {
                   {benefit.icon}
                 </div>
                 {/* Title */}
-                <h3 className="text-lg font-semibold mt-4 mb-2">
+                <h3 className="text-lg text-gray-800 font-semibold mt-4 mb-2">
                   {benefit.title}
                 </h3>
                 {/* Description */}

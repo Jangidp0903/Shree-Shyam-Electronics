@@ -5,29 +5,34 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full font-sans">
+    <footer
+      className="w-full font-sans"
+      aria-label="Footer for Shree Shyam Electronics - Trusted Electronics Store with 24/7 Customer Support and Contact Details"
+    >
       <div className="bg-white border-t border-gray-200 py-6 shadow-sm">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-center md:text-left">
             {/* Logo */}
             <div className="font-bold text-gray-800 text-2xl tracking-tight">
-              arbuzz
+              Shree Shyam Electronics
             </div>
 
             {/* Copyright */}
             <div className="text-gray-500 text-sm">
-              © {currentYear} Arbuzz UI Kit. All rights reserved
+              © {currentYear} Shree Shyam Electronics. All rights reserved.
             </div>
 
             {/* Contact Info */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-4">
               {/* Support */}
               <div className="flex items-center">
                 <Clock
                   className="h-4 w-4 text-orange-500 mr-2"
                   strokeWidth={2}
                 />
-                <span className="text-gray-600 text-sm">24/7 Support</span>
+                <span className="text-gray-600 text-sm">
+                  24/7 Customer Support
+                </span>
               </div>
 
               {/* Phone */}

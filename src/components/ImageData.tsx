@@ -75,7 +75,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ image }) => {
       <div className="w-full aspect-square overflow-hidden relative">
         <Image
           src={image.image}
-          alt={image.title}
+          alt={`${image.title} - Expert appliance repair service`}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -102,12 +102,14 @@ const ImageGallery: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Fridge, Washing Machine & Microwave Repair
+              Affordable Fridge, Washing Machine & Microwave Repair Services at
+              Your Doorstep
             </h1>
             <div className="h-1 w-20 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto rounded-full mb-4"></div>
             <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              Fast, reliable, and affordable repair service at your doorstep for
-              all major home appliances. Book a technician today!
+              Fast and reliable appliance repair including refrigerator
+              compressor repair, washing machine motor noise fix, and microwave
+              door replacement. Book your technician online now!
             </p>
           </div>
         </div>

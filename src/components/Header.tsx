@@ -162,7 +162,7 @@ const Header: React.FC = () => {
 
           {/* Download Button - Updated with orange and white theme */}
           <div className="hidden md:block">
-            <Button text="Download" />
+            <Button text="Contact Now" />
           </div>
 
           {/* Mobile menu button with custom SVG */}
@@ -245,7 +245,7 @@ const Header: React.FC = () => {
             ))}
             {/* Download Button in Mobile Menu - Updated with orange and white theme */}
             <div className="w-full">
-              <Button text="Download" className="w-full" />
+              <Button text="Contact Now" className="w-full" />
             </div>
           </div>
         </div>

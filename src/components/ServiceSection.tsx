@@ -18,47 +18,47 @@ interface ServiceItem {
 // Updated services array with proper icons (removed delay values)
 const services: ServiceItem[] = [
   {
-    title: "Fridge Repair",
+    title: "Affordable Fridge Repair Service",
     description:
-      "We handle all kinds of fridge issues including cooling problems, gas refilling, and compressor repair.",
+      "We handle all cooling issues, compressor replacement, and gas refilling with genuine parts. Get fast fridge repair service near you.",
     icon: (
       <Snowflake className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
     ),
   },
   {
-    title: "Washing Machine Repair",
+    title: "Same Day Washing Machine Repair",
     description:
-      "Expert repair services for top-load, front-load, and semi-automatic washing machines.",
+      "Expert technicians for top-load, front-load, and semi-automatic machines. Fix drainage, noise, or spin issues quickly.",
     icon: (
       <Droplet className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
     ),
   },
   {
-    title: "Microwave Repair",
+    title: "Microwave Heating & Rotation Repair",
     description:
-      "We fix heating issues, plate rotation problems, and other electrical faults in all types of microwaves.",
+      "We fix heating problems, plate not rotating, and other electrical faults in all microwave brands.",
     icon: <Zap className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />,
   },
   {
-    title: "Quick Diagnosis",
+    title: "Quick Appliance Diagnosis",
     description:
-      "Our technicians quickly identify the problem and suggest the best possible repair solution.",
+      "Our trained technicians quickly identify the problem and suggest cost-effective solutions with warranty support.",
     icon: (
       <Wrench className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
     ),
   },
   {
-    title: "Genuine Spare Parts",
+    title: "Genuine Spare Parts with Warranty",
     description:
-      "We only use original and branded spare parts to ensure long-lasting performance.",
+      "We only use original branded spare parts for long-lasting repair and performance assurance.",
     icon: (
       <ShieldCheck className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
     ),
   },
   {
-    title: "On-Time Service",
+    title: "On-Time Doorstep Repair Service",
     description:
-      "We value your time – that’s why we guarantee fast and punctual repair services at your doorstep.",
+      "We value your time and guarantee quick, on-time appliance repair service at your home.",
     icon: (
       <Clock className="w-10 h-10 md:w-12 md:h-12 mx-auto text-orange-500" />
     ),
@@ -89,6 +89,11 @@ const ServiceSection: React.FC = () => {
   return (
     <section id="services" className="py-10 md:py-16">
       <div className="container mx-auto px-4">
+        {/* Heading */}
+        <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
+          Expert Home Appliance Repair Services Near You
+        </h1>
+
         {/* Badge */}
         <div className="mb-4 flex justify-center">
           <span className="inline-block text-sm sm:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-600">

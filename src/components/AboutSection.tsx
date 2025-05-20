@@ -12,12 +12,12 @@ interface FeatureItem {
 const AboutSection: React.FC = () => {
   // Features list
   const features: FeatureItem[] = [
-    { id: 1, text: "Certified and experienced technicians" },
+    { id: 1, text: "Certified washing machine repair technicians near you" },
     {
       id: 2,
-      text: "Quick and reliable home service",
+      text: "Quick microwave oven repair doorstep service",
     },
-    { id: 3, text: "Affordable pricing with genuine spare parts" },
+    { id: 3, text: "Affordable refrigerator repair with genuine spare parts" },
   ];
 
   return (
@@ -34,7 +34,7 @@ const AboutSection: React.FC = () => {
                 <div className="relative w-full h-0 pb-[100%] sm:pb-[80%]">
                   <Image
                     src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    alt="Repair service image"
+                    alt="Technician repairing home appliances like washing machine and fridge"
                     fill
                     className="rounded-xl object-cover"
                     sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
@@ -50,21 +50,22 @@ const AboutSection: React.FC = () => {
             {/* Badge */}
             <div className="mb-3 sm:mb-4">
               <span className="inline-block text-xs sm:text-sm md:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-600">
-                About Us
+                About Our Appliance Repair Services
               </span>
             </div>
 
             {/* Heading */}
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl my-3 sm:my-4 md:my-6 text-gray-800 font-bold">
-              Reliable Electronic Repair at Your Doorstep
+              Trusted & Affordable Home Appliance Repair at Your Doorstep
             </h1>
 
             {/* Description */}
             <p className="text-sm md:text-base lg:text-lg font-medium text-gray-600">
-              We specialize in repairing home appliances like refrigerators,
-              washing machines, microwaves, and more. Whether it's a cooling
-              issue or a machine not starting — our expert team ensures fast,
-              efficient, and guaranteed service at your convenience.
+              Our certified technicians specialize in home appliance repair
+              services such as refrigerators, washing machines, and microwave
+              ovens. Get expert home servicing with genuine parts and fast
+              doorstep solutions. Whether your machine isn&apos;t cooling or
+              won&apos;t start, we&apos;re here to help.
             </p>
 
             {/* List */}
@@ -84,7 +85,7 @@ const AboutSection: React.FC = () => {
 
             {/* Button */}
             <div className="mt-5 sm:mt-6 md:mt-8 lg:mt-10">
-              <Button text="Book a Service" />
+              <Button text="Book Your Home Appliance Service Now" />
             </div>
           </div>
         </div>

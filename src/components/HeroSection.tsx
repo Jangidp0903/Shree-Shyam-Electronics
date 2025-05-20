@@ -18,30 +18,36 @@ const HeroSection: React.FC = () => {
             {/* Badge */}
             <div className="mb-3 sm:mb-4">
               <span className="inline-block text-xs sm:text-sm md:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-600">
-                Trusted Appliance Repair
+                Trusted Appliance Repair Technicians
               </span>
             </div>
 
             {/* Heading */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl mb-4 sm:mb-6 font-bold text-blue-950">
-              Affordable & Reliable Appliance Repair Services{" "}
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl mb-4 sm:mb-6 font-bold text-blue-950">
+              Affordable & Same-Day Home Appliance Repair Services{" "}
               <span className="text-orange-500">
-                for Washing Machines, Fridges & More
+                for Washing Machines, Fridges & Microwave Appliances
               </span>
             </h1>
 
+            {/* Sub-heading */}
+            <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3">
+              Get quick and reliable appliance repair at your doorstep
+            </h2>
+
             {/* Description */}
             <p className="text-sm md:text-base lg:text-lg text-gray-700 mb-6 sm:mb-8 max-w-2xl">
-              We specialize in fast, affordable appliance repair services at
-              your doorstep. Whether it’s a fridge not cooling, a broken washing
-              machine, microwave issues, or motor failure — our expert
-              technicians are here to help. Book trusted home appliance repair
-              in your area with same-day service options.
+              Need to fix your washing machine, refrigerator, or microwave? Our
+              certified technicians specialize in fast and affordable home
+              appliance repair services. Whether it&apos;s a fridge not cooling,
+              washer not spinning, microwave not heating, or a noisy motor — we
+              fix it all. Book a service today and enjoy same-day, professional
+              appliance repair in your area.
             </p>
 
             {/* Button */}
             <div className="mt-2">
-              <Button text="Book Home Appliance Repair Now" />
+              <Button text="Book Affordable Appliance Repair Now" />
             </div>
           </div>
 
@@ -50,7 +56,7 @@ const HeroSection: React.FC = () => {
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
               <Image
                 src={Hero as StaticImageData}
-                alt="Technician providing reliable home appliance repair service"
+                alt="Technician repairing washing machine and fridge at home"
                 width={400}
                 height={600}
                 layout="responsive"
