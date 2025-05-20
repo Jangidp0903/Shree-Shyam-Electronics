@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
               <Image
                 src={Hero as StaticImageData}
-                alt="Technician repairing washing machine and fridge at home"
+                alt="Certified technician repairing washing machine and fridge"
                 width={400}
                 height={600}
                 layout="responsive"
