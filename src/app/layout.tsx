@@ -43,7 +43,7 @@ export default function RootLayout({
         {/* Always use absolute URLs (https://) */}
         <meta
           property="og:title"
-          content="Gurugram Home Appliance Repair | Fridge, Washing Machine & Microwave Service"
+          content="Shree Shyam Electronics | Fridge, Washing Machine & Microwave Service"
         />
         <meta
           property="og:description"
