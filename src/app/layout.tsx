@@ -26,17 +26,17 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Shree Shyam Electronics" }],
   robots: "index, follow",
-  metadataBase: new URL("https://www.shreeshyamelectronics.vercel.app"),
+  metadataBase: new URL("https://shree-shyam-electronics.vercel.app"),
   openGraph: {
     title:
       "Shree Shyam Electronics | Fridge, Washing Machine & Microwave Service",
     description:
       "Book same-day fridge repair, washing machine repair, and microwave repair in Gurugram with certified technicians. Affordable, reliable, 24/7 support.",
-    url: "https://www.shreeshyamelectronics.vercel.app",
+    url: "https://shree-shyam-electronics.vercel.app",
     siteName: "Shree Shyam Electronics",
     images: [
       {
-        url: "https://www.shreeshyamelectronics.vercel.app/hero.png",
+        url: "https://shree-shyam-electronics.vercel.app/hero.png",
         width: 1200,
         height: 630,
         alt: "Certified technician repairing a washing machine and fridge",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       "Gurugram Home Appliance Repair | Fridge, Washing Machine & Microwave Service",
     description:
       "Same-day fridge repair, washing machine repair, and microwave repair in Gurugram. Affordable, reliable service with certified technicians.",
-    images: ["https://www.shreeshyamelectronics.vercel.app/hero.png"],
+    images: ["https://shree-shyam-electronics.vercel.app/hero.png"],
     site: "@ShreeShyamElect",
     creator: "@ShreeShyamElect",
   },
