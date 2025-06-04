@@ -32,7 +32,7 @@ const contactData: ContactInfo[] = [
 
 const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="py-12 px-4 bg-orange-50 min-h-screen">
+    <section id="contact" className="py-12 px-4 bg-gray-50 min-h-screen">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

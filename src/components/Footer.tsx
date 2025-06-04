@@ -62,14 +62,14 @@ const Footer: React.FC = memo(() => {
       {
         icon: Phone,
         label: "Phone",
-        value: "037-2339-9874",
-        href: "tel:037-2339-9874",
+        value: "+91 9873126033",
+        href: "tel:+919873126033",
       },
       {
         icon: Mail,
         label: "Email",
-        value: "info@shreeshyam.com",
-        href: "mailto:info@shreeshyam.com",
+        value: "rajujangid65@gmail.com",
+        href: "mailto:rajujangid65@gmail.com",
       },
     ],
     []
