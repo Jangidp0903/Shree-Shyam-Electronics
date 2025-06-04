@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col justify-center order-2 xl:order-1 mt-8 xl:mt-0">
             {/* Badge */}
             <div className="mb-3 sm:mb-4">
-              <span className="inline-block text-xs sm:text-sm md:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-600">
+              <span className="inline-block text-xs sm:text-sm md:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-500">
                 Trusted Appliance Repair Technicians
               </span>
             </div>
@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
             {/* Heading */}
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl mb-4 sm:mb-6 font-bold text-blue-950">
               Affordable & Same-Day Home Appliance Repair Services{" "}
-              <span className="text-orange-500">
+              <span className="text-orange-600">
                 for Washing Machines, Fridges & Microwave Appliances
               </span>
             </h1>

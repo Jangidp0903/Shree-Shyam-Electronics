@@ -42,7 +42,7 @@ const BenefitSections: React.FC = () => {
         {/* Badge */}
         <div className="mx-auto w-fit mb-4">
           <div className="mb-4">
-            <span className="inline-block text-sm sm:text-base rounded-lg font-bold text-white px-4 py-1 bg-orange-600">
+            <span className="inline-block text-sm sm:text-base rounded-lg font-bold text-white px-4 py-1 bg-orange-500">
               Appliance Repair Benefits
             </span>
           </div>

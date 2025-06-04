@@ -96,7 +96,7 @@ const ServiceSection: React.FC = () => {
 
         {/* Badge */}
         <div className="mb-4 flex justify-center">
-          <span className="inline-block text-sm sm:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-600">
+          <span className="inline-block text-sm sm:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-500">
             Our Services
           </span>
         </div>

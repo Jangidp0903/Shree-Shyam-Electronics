@@ -49,7 +49,7 @@ const AboutSection: React.FC = () => {
           <div className="lg:col-span-7 mt-6 md:mt-0 order-1 md:order-2">
             {/* Badge */}
             <div className="mb-3 sm:mb-4">
-              <span className="inline-block text-xs sm:text-sm md:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-600">
+              <span className="inline-block text-xs sm:text-sm md:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-500">
                 About Our Appliance Repair Services
               </span>
             </div>
@@ -75,7 +75,7 @@ const AboutSection: React.FC = () => {
                   key={feature.id}
                   className="flex items-center space-x-2 sm:space-x-3"
                 >
-                  <CircleCheckBig className="text-orange-500 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0" />
+                  <CircleCheckBig className="text-orange-600 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0" />
                   <p className="text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                     {feature.text}
                   </p>
