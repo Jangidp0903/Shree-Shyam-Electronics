@@ -1,7 +1,7 @@
 // app/layout.tsx
 import React from "react";
 import { DM_Sans } from "next/font/google";
-import Header from "@/components/Header"; // assume Header.tsx & Footer.tsx exist
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
@@ -36,10 +36,11 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <link
           rel="canonical"
-          href="https://www.shreeshyamelectronics.vercel.app"
+          href="https://www.shreeshyamelectronics.vercel.app/"
         />
 
         {/* Open Graph / Facebook */}
+        {/* Always use absolute URLs (https://) */}
         <meta
           property="og:title"
           content="Gurugram Home Appliance Repair | Fridge, Washing Machine & Microwave Service"
@@ -50,13 +51,19 @@ export default function RootLayout({
         />
         <meta
           property="og:url"
-          content="https://www.shreeshyamelectronics.vercel.app"
+          content="https://www.shreeshyamelectronics.vercel.app/"
         />
         <meta property="og:site_name" content="Shree Shyam Electronics" />
         <meta
           property="og:image"
           content="https://www.shreeshyamelectronics.vercel.app/hero.png"
         />
+        {/* Useful to add secure_url and type as well */}
+        <meta
+          property="og:image:secure_url"
+          content="https://www.shreeshyamelectronics.vercel.app/hero.png"
+        />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
@@ -66,7 +73,7 @@ export default function RootLayout({
         <meta property="og:locale" content="en_IN" />
         <meta property="og:type" content="website" />
 
-        {/* Twitter */}
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -80,7 +87,12 @@ export default function RootLayout({
           name="twitter:image"
           content="https://www.shreeshyamelectronics.vercel.app/hero.png"
         />
+        <meta name="twitter:site" content="@ShreeShyamElect" />
         <meta name="twitter:creator" content="@ShreeShyamElect" />
+        <meta
+          name="twitter:url"
+          content="https://www.shreeshyamelectronics.vercel.app/"
+        />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" type="image/png" />
@@ -94,8 +106,8 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Shree Shyam Electronics",
               image: "https://www.shreeshyamelectronics.vercel.app/hero.png",
-              "@id": "https://www.shreeshyamelectronics.vercel.app",
-              url: "https://www.shreeshyamelectronics.vercel.app",
+              "@id": "https://www.shreeshyamelectronics.vercel.app/",
+              url: "https://www.shreeshyamelectronics.vercel.app/",
               telephone: "+91-9876543210",
               address: {
                 "@type": "PostalAddress",
