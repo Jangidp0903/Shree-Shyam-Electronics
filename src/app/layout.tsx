@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Shree Shyam Electronics | Fridge, Washing Machine & Microwave Service",
     description:
       "Book same-day fridge repair, washing machine repair, and microwave repair in Gurugram with certified technicians. Affordable, reliable, 24/7 support.",
-    url: "https://shree-shyam-electronics.vercel.app",
+    url: "https://shree-shyam-electronics.vercel.app?v=2",
     siteName: "Shree Shyam Electronics",
     images: [
       {
