@@ -1,7 +1,10 @@
+// app/layout.tsx
+import React from "react";
 import { DM_Sans } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
+import Head from "next/head";
+import Header from "@/components/Header"; // assume Header.tsx & Footer.tsx exist
 import Footer from "@/components/Footer";
+import "./globals.css";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -11,46 +14,81 @@ const dmSans = DM_Sans({
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className={dmSans.variable}>
-      <head>
-        <title>Shree Shyam Electronics | Trusted Gurugram Appliance Repair</title>
+      <Head>
+        {/* Primary Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+          Gurugram Home Appliance Repair | Fridge, Washing Machine & Microwave Service
+        </title>
         <meta
           name="description"
-          content="Shree Shyam Electronics offers same-day, affordable home appliance repair in Gurugram—fridges, washing machines, microwaves & more. Certified technicians at your doorstep."
+          content="Same-day, certified fridge repair, washing machine repair, and microwave repair in Gurugram. Affordable on-site appliance service with genuine parts and 24/7 support."
         />
         <meta
           name="keywords"
-          content="home appliance repair Gurugram, washing machine repair near me, fridge repair Gurugram, microwave repair Gurugram, appliance service Gurugram, same day repair Gurugram"
+          content="Gurugram appliance repair, fridge repair Gurugram, washing machine repair Gurugram, microwave repair Gurugram, on-site appliance service Gurugram, same day repair Gurugram"
         />
         <meta name="author" content="Shree Shyam Electronics" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.shreeshyamelectronics.vercel.app" />
+        <link
+          rel="canonical"
+          href="https://www.shreeshyamelectronics.vercel.app"
+        />
 
-        {/* Open Graph Tags */}
-        <meta property="og:title" content="Shree Shyam Electronics – Trusted Appliance Repairs in Gurugram" />
-        <meta property="og:description" content="Book same-day fridge, washer & microwave repair in Gurugram with certified technicians. Affordable, reliable, 24/7 support." />
-        <meta property="og:url" content="https://www.shreeshyamelectronics.vercel.app" />
+        {/* Open Graph / Facebook */}
+        <meta
+          property="og:title"
+          content="Gurugram Home Appliance Repair | Fridge, Washing Machine & Microwave Service"
+        />
+        <meta
+          property="og:description"
+          content="Book same-day fridge repair, washing machine repair, and microwave repair in Gurugram with certified technicians. Affordable, reliable, 24/7 support."
+        />
+        <meta
+          property="og:url"
+          content="https://www.shreeshyamelectronics.vercel.app"
+        />
         <meta property="og:site_name" content="Shree Shyam Electronics" />
-        <meta property="og:image" content="https://www.shreeshyamelectronics.vercel.app/hero.png" />
+        <meta
+          property="og:image"
+          content="https://www.shreeshyamelectronics.vercel.app/hero.png"
+        />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Technician repairing appliances" />
+        <meta
+          property="og:image:alt"
+          content="Certified technician repairing a washing machine and fridge"
+        />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:type" content="website" />
 
-        {/* Twitter Card */}
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Shree Shyam Electronics | Appliance Repair Gurugram" />
-        <meta name="twitter:description" content="Same-day fridge, washing machine & microwave repair in Gurugram. Certified, affordable, on-site service." />
-        <meta name="twitter:image" content="https://www.shreeshyamelectronics.vercel.app/hero.png" />
+        <meta
+          name="twitter:title"
+          content="Gurugram Home Appliance Repair | Fridge, Washing Machine & Microwave Service"
+        />
+        <meta
+          name="twitter:description"
+          content="Same-day fridge repair, washing machine repair, and microwave repair in Gurugram. Affordable, reliable service with certified technicians."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.shreeshyamelectronics.vercel.app/hero.png"
+        />
         <meta name="twitter:creator" content="@ShreeShyamElect" />
 
         {/* Favicon */}
-        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link
+          rel="icon"
+          href="/favicon.png"
+          type="image/png"
+        />
 
         {/* Structured Data (Schema.org) */}
         <script
@@ -60,7 +98,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Shree Shyam Electronics",
-              image: "https://www.shreeshyamelectronics.vercel.app/hero.png",
+              image:
+                "https://www.shreeshyamelectronics.vercel.app/hero.png",
               "@id": "https://www.shreeshyamelectronics.vercel.app",
               url: "https://www.shreeshyamelectronics.vercel.app",
               telephone: "+91-9876543210",
@@ -97,7 +136,8 @@ export default function RootLayout({
             }),
           }}
         />
-      </head>
+      </Head>
+
       <body className="antialiased font-sans">
         <Header />
         {children}
