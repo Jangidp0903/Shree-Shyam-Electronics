@@ -1,7 +1,6 @@
 // app/layout.tsx
 import React from "react";
 import { DM_Sans } from "next/font/google";
-import Head from "next/head";
 import Header from "@/components/Header"; // assume Header.tsx & Footer.tsx exist
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -19,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={dmSans.variable}>
-      <Head>
+      <head>
         {/* Primary Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
@@ -83,12 +82,8 @@ export default function RootLayout({
         />
         <meta name="twitter:creator" content="@ShreeShyamElect" />
 
-        {/* Favicon */}
-        <link
-          rel="icon"
-          href="/favicon.png"
-          type="image/png"
-        />
+         {/* Favicon */}
+        <link rel="icon" href="/favicon.png" type="image/png" />
 
         {/* Structured Data (Schema.org) */}
         <script
@@ -136,7 +131,7 @@ export default function RootLayout({
             }),
           }}
         />
-      </Head>
+      </head>
 
       <body className="antialiased font-sans">
         <Header />
