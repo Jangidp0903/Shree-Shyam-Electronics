@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 // Contact information interface
 interface ContactInfo {
@@ -14,25 +14,19 @@ const contactData: ContactInfo[] = [
   {
     icon: Mail,
     title: "Email",
-    value: "hello@example.com",
-    link: "mailto:hello@example.com",
+    value: "rajujangid65@gmail.com",
+    link: "mailto:rajujangid65@gmail.com",
   },
   {
     icon: Phone,
     title: "Phone",
-    value: "+91 9876543210",
-    link: "tel:+919876543210",
+    value: "+91 9873126033",
+    link: "tel:+919873126033",
   },
   {
     icon: MapPin,
     title: "Address",
-    value: "123 Main Street, City, State 12345",
-  },
-  {
-    icon: Globe,
-    title: "Website",
-    value: "www.example.com",
-    link: "https://www.example.com",
+    value: "Gurugram Haryana",
   },
 ];
 
@@ -53,33 +47,28 @@ const ContactSection: React.FC = () => {
           <div className="w-20 h-1 bg-orange-500 mx-auto mt-6"></div>
         </div>
 
-        {/* Contact Information Grid */}
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
-          role="list"
-        >
+        {/* Contact Information Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {contactData.map((contact, index) => {
             const IconComponent = contact.icon;
             return (
-              <article
+              <div
                 key={index}
-                className="bg-white rounded-xl p-6 border-2 border-orange-100"
-                role="listitem"
+                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-orange-300 transition-all duration-300"
               >
-                <div className="flex justify-center mb-4">
-                  <IconComponent
-                    size={48}
-                    className="text-orange-500"
-                    aria-hidden="true"
-                  />
+                <div className="flex items-center mb-6">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mr-4">
+                    <IconComponent size={20} className="text-orange-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {contact.title}
+                  </h3>
                 </div>
-                <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 text-center">
-                  {contact.title}
-                </h2>
+
                 {contact.link ? (
                   <a
                     href={contact.link}
-                    className="text-gray-600 text-center block break-words text-sm sm:text-base leading-relaxed"
+                    className="text-gray-600 hover:text-orange-600 transition-colors duration-200 block text-lg leading-relaxed"
                     target={
                       contact.link.startsWith("http") ? "_blank" : undefined
                     }
@@ -92,15 +81,15 @@ const ContactSection: React.FC = () => {
                     {contact.value}
                   </a>
                 ) : contact.title.toLowerCase() === "address" ? (
-                  <address className="text-gray-600 text-center not-italic break-words text-sm sm:text-base leading-relaxed">
+                  <address className="text-gray-600 not-italic text-lg leading-relaxed">
                     {contact.value}
                   </address>
                 ) : (
-                  <p className="text-gray-600 text-center break-words text-sm sm:text-base leading-relaxed">
+                  <p className="text-gray-600 text-lg leading-relaxed">
                     {contact.value}
                   </p>
                 )}
-              </article>
+              </div>
             );
           })}
         </div>
@@ -122,14 +111,14 @@ const ContactSection: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:rajujangid65@gmail.com"
                 className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold text-sm sm:text-base w-full sm:w-auto text-center flex items-center justify-center gap-2"
               >
                 <Mail size={18} />
                 Email Repair
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+919873126033"
                 className="bg-orange-100 text-orange-600 px-6 py-3 rounded-lg font-semibold text-sm sm:text-base w-full sm:w-auto text-center border-2 border-orange-200 flex items-center justify-center gap-2"
               >
                 <Phone size={18} />
