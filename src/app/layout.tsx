@@ -1,12 +1,11 @@
-import { Montserrat } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-// Import Montserrat font with a CSS variable
-const montserrat = Montserrat({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
@@ -16,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={montserrat.variable}>
+    <html lang="en" className={dmSans.variable}>
       <head>
         <title>Shree Shyam Electronics | Trusted Gurugram Appliance Repair</title>
         <meta
@@ -29,10 +28,7 @@ export default function RootLayout({
         />
         <meta name="author" content="Shree Shyam Electronics" />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://www.shreeshyamelectronics.vercel.app"
-        />
+        <link rel="canonical" href="https://www.shreeshyamelectronics.vercel.app" />
 
         {/* Open Graph Tags */}
         <meta property="og:title" content="Shree Shyam Electronics – Trusted Appliance Repairs in Gurugram" />
@@ -102,7 +98,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased">
+      <body className="antialiased font-sans">
         <Header />
         {children}
         <Footer />
