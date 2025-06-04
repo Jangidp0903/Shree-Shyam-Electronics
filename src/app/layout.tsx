@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Shree Shyam Electronics",
     images: [
       {
-        url: "/hero.png",
+        url: "https://shree-shyam-electronics.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero.9cfcba89.png&w=1920&q=75",
         width: 1200,
         height: 630,
         alt: "Certified technician repairing a washing machine and fridge",
