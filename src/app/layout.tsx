@@ -22,7 +22,7 @@ export default function RootLayout({
         {/* Primary Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
-          Gurugram Home Appliance Repair | Fridge, Washing Machine & Microwave Service
+          Shree Shyam Electronics | Fridge, Washing Machine & Microwave Service
         </title>
         <meta
           name="description"
@@ -82,7 +82,7 @@ export default function RootLayout({
         />
         <meta name="twitter:creator" content="@ShreeShyamElect" />
 
-         {/* Favicon */}
+        {/* Favicon */}
         <link rel="icon" href="/favicon.png" type="image/png" />
 
         {/* Structured Data (Schema.org) */}
@@ -93,8 +93,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Shree Shyam Electronics",
-              image:
-                "https://www.shreeshyamelectronics.vercel.app/hero.png",
+              image: "https://www.shreeshyamelectronics.vercel.app/hero.png",
               "@id": "https://www.shreeshyamelectronics.vercel.app",
               url: "https://www.shreeshyamelectronics.vercel.app",
               telephone: "+91-9876543210",
