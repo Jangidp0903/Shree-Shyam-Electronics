@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-// Montserrat font setup
+// Import Montserrat font with a CSS variable
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.variable}>
       <head>
         <title>Shree Shyam Electronics | Trusted Gurugram Appliance Repair</title>
         <meta
@@ -29,7 +29,10 @@ export default function RootLayout({
         />
         <meta name="author" content="Shree Shyam Electronics" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.shreeshyamelectronics.vercel.app" />
+        <link
+          rel="canonical"
+          href="https://www.shreeshyamelectronics.vercel.app"
+        />
 
         {/* Open Graph Tags */}
         <meta property="og:title" content="Shree Shyam Electronics – Trusted Appliance Repairs in Gurugram" />
@@ -53,7 +56,7 @@ export default function RootLayout({
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" type="image/png" />
 
-        {/* Structured Data */}
+        {/* Structured Data (Schema.org) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -99,7 +102,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${montserrat.variable} antialiased`}>
+      <body className="antialiased">
         <Header />
         {children}
         <Footer />
