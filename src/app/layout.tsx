@@ -1,16 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Montserrat font setup
+const montserrat = Montserrat({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
 });
 
 export default function RootLayout({
@@ -32,10 +29,7 @@ export default function RootLayout({
         />
         <meta name="author" content="Shree Shyam Electronics" />
         <meta name="robots" content="index, follow" />
-        <link
-          rel="canonical"
-          href="https://www.shreeshyamelectronics.vercel.app"
-        />
+        <link rel="canonical" href="https://www.shreeshyamelectronics.vercel.app" />
 
         {/* Open Graph Tags */}
         <meta property="og:title" content="Shree Shyam Electronics – Trusted Appliance Repairs in Gurugram" />
@@ -59,7 +53,7 @@ export default function RootLayout({
         {/* Favicon */}
         <link rel="icon" href="/favicon.png" type="image/png" />
 
-        {/* Structured Data (Schema.org) */}
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -105,9 +99,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${montserrat.variable} antialiased`}>
         <Header />
         {children}
         <Footer />
