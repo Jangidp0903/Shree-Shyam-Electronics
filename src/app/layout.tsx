@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       "Gurugram Home Appliance Repair | Fridge, Washing Machine & Microwave Service",
     description:
       "Same-day fridge repair, washing machine repair, and microwave repair in Gurugram. Affordable, reliable service with certified technicians.",
-    images: ["/hero.png"],
+    images: ["https://www.shreeshyamelectronics.vercel.app/hero.png"],
     site: "@ShreeShyamElect",
     creator: "@ShreeShyamElect",
   },
