@@ -6,4 +6,4 @@ Allow: /
 Host: https://shree-shyam-electronics.vercel.app
 
 # Sitemaps
-Sitemap: https://shree-shyam-electronics.vercel.app/sitemap.xml
+Sitemap: https://shree-shyam-electronics.vercel.app/api/sitemap.xml
