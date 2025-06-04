@@ -85,7 +85,7 @@ const AboutSection: React.FC = () => {
 
             {/* Button */}
             <div className="mt-5 sm:mt-6 md:mt-8 lg:mt-10">
-              <Button text="Schedule Repair" />
+              <Button text="Schedule Repair" phoneNumber="+919873126033" />
             </div>
           </div>
         </div>

@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
 
             {/* Button */}
             <div className="mt-2">
-              <Button text="Book Repair" />
+              <Button text="Book Repair" phoneNumber="+919873126033" />
             </div>
           </div>
 
