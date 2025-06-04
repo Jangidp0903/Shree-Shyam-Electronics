@@ -126,14 +126,14 @@ const ContactSection: React.FC = () => {
                 className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold text-sm sm:text-base w-full sm:w-auto text-center flex items-center justify-center gap-2"
               >
                 <Mail size={18} />
-                Send us an Email for Appliance Repair
+                Email Repair
               </a>
               <a
                 href="tel:+919876543210"
                 className="bg-orange-100 text-orange-600 px-6 py-3 rounded-lg font-semibold text-sm sm:text-base w-full sm:w-auto text-center border-2 border-orange-200 flex items-center justify-center gap-2"
               >
                 <Phone size={18} />
-                Call Us Now for Fast Appliance Repair Service
+                Call Repair
               </a>
             </div>
           </div>
