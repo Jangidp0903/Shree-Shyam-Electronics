@@ -1,8 +1,96 @@
-import React from "react";
+import React, { memo, useMemo } from "react";
 import { Clock, Phone, Mail, Shield, Users, Zap } from "lucide-react";
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+// Memoized contact item component
+const ContactItem = memo<{
+  icon: React.ElementType;
+  label: string;
+  value: string;
+  href: string;
+}>(({ icon: Icon, label, value, href }) => (
+  <div className="group">
+    <div className="flex items-center mb-1">
+      <Icon className="h-4 w-4 text-orange-500 mr-2" />
+      <span className="text-xs text-gray-500 uppercase tracking-wide">
+        {label}
+      </span>
+    </div>
+    <a
+      href={href}
+      className="text-sm font-semibold text-gray-800 hover:text-orange-500 transition-colors block ml-6"
+    >
+      {value}
+    </a>
+  </div>
+));
+
+ContactItem.displayName = "ContactItem";
+
+// Memoized hours row component
+const HoursRow = memo<{
+  day: string;
+  hours: string;
+}>(({ day, hours }) => (
+  <div className="flex justify-between">
+    <span className="text-gray-600">{day}</span>
+    <span className="text-gray-900 font-medium">{hours}</span>
+  </div>
+));
+
+HoursRow.displayName = "HoursRow";
+
+// Memoized feature badge component
+const FeatureBadge = memo<{
+  icon: React.ElementType;
+  text: string;
+}>(({ icon: Icon, text }) => (
+  <div className="flex items-center px-3 py-1.5 bg-white rounded-full border border-orange-100 shadow-sm">
+    <Icon className="h-4 w-4 text-orange-500 mr-2" />
+    <span className="text-xs font-medium text-gray-700">{text}</span>
+  </div>
+));
+
+FeatureBadge.displayName = "FeatureBadge";
+
+const Footer: React.FC = memo(() => {
+  // Memoize current year to prevent unnecessary recalculations
+  const currentYear = useMemo(() => new Date().getFullYear(), []);
+
+  // Memoize static data
+  const contactData = useMemo(
+    () => [
+      {
+        icon: Phone,
+        label: "Phone",
+        value: "037-2339-9874",
+        href: "tel:037-2339-9874",
+      },
+      {
+        icon: Mail,
+        label: "Email",
+        value: "info@shreeshyam.com",
+        href: "mailto:info@shreeshyam.com",
+      },
+    ],
+    []
+  );
+
+  const businessHours = useMemo(
+    () => [
+      { day: "Mon - Fri", hours: "9:00 AM - 8:00 PM" },
+      { day: "Saturday", hours: "9:00 AM - 6:00 PM" },
+      { day: "Sunday", hours: "10:00 AM - 4:00 PM" },
+    ],
+    []
+  );
+
+  const features = useMemo(
+    () => [
+      { icon: Shield, text: "Quality Assured" },
+      { icon: Zap, text: "Fast Service" },
+    ],
+    []
+  );
 
   return (
     <footer className="w-full font-sans bg-gradient-to-br from-orange-50 to-white border-t border-orange-100">
@@ -36,18 +124,13 @@ const Footer: React.FC = () => {
 
                 {/* Key Features */}
                 <div className="flex flex-wrap gap-3">
-                  <div className="flex items-center px-3 py-1.5 bg-white rounded-full border border-orange-100 shadow-sm">
-                    <Shield className="h-4 w-4 text-orange-500 mr-2" />
-                    <span className="text-xs font-medium text-gray-700">
-                      Quality Assured
-                    </span>
-                  </div>
-                  <div className="flex items-center px-3 py-1.5 bg-white rounded-full border border-orange-100 shadow-sm">
-                    <Zap className="h-4 w-4 text-orange-500 mr-2" />
-                    <span className="text-xs font-medium text-gray-700">
-                      Fast Service
-                    </span>
-                  </div>
+                  {features.map((feature, index) => (
+                    <FeatureBadge
+                      key={index}
+                      icon={feature.icon}
+                      text={feature.text}
+                    />
+                  ))}
                 </div>
               </div>
 
@@ -61,35 +144,15 @@ const Footer: React.FC = () => {
                 </h3>
 
                 <div className="space-y-3">
-                  <div className="group">
-                    <div className="flex items-center mb-1">
-                      <Phone className="h-4 w-4 text-orange-500 mr-2" />
-                      <span className="text-xs text-gray-500 uppercase tracking-wide">
-                        Phone
-                      </span>
-                    </div>
-                    <a
-                      href="tel:037-2339-9874"
-                      className="text-sm font-semibold text-gray-800 hover:text-orange-500 transition-colors block ml-6"
-                    >
-                      037-2339-9874
-                    </a>
-                  </div>
-
-                  <div className="group">
-                    <div className="flex items-center mb-1">
-                      <Mail className="h-4 w-4 text-orange-500 mr-2" />
-                      <span className="text-xs text-gray-500 uppercase tracking-wide">
-                        Email
-                      </span>
-                    </div>
-                    <a
-                      href="mailto:info@shreeshyam.com"
-                      className="text-sm font-semibold text-gray-800 hover:text-orange-500 transition-colors block ml-6"
-                    >
-                      info@shreeshyam.com
-                    </a>
-                  </div>
+                  {contactData.map((contact, index) => (
+                    <ContactItem
+                      key={index}
+                      icon={contact.icon}
+                      label={contact.label}
+                      value={contact.value}
+                      href={contact.href}
+                    />
+                  ))}
                 </div>
               </div>
 
@@ -103,24 +166,13 @@ const Footer: React.FC = () => {
                 </h3>
 
                 <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Mon - Fri</span>
-                    <span className="text-gray-900 font-medium">
-                      9:00 AM - 8:00 PM
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday</span>
-                    <span className="text-gray-900 font-medium">
-                      9:00 AM - 6:00 PM
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Sunday</span>
-                    <span className="text-gray-900 font-medium">
-                      10:00 AM - 4:00 PM
-                    </span>
-                  </div>
+                  {businessHours.map((schedule, index) => (
+                    <HoursRow
+                      key={index}
+                      day={schedule.day}
+                      hours={schedule.hours}
+                    />
+                  ))}
                 </div>
 
                 <div className="mt-3 p-2.5 bg-gradient-to-r from-orange-50 to-orange-100 rounded-lg border border-orange-200">
@@ -162,6 +214,8 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = "Footer";
 
 export default Footer;
