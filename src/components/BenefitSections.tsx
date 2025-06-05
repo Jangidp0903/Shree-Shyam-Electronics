@@ -1,6 +1,7 @@
 import { Wrench, ShieldCheck, Timer, Smile } from "lucide-react";
 import React from "react";
 import Image from "next/image";
+import Benefits from "../../public/benefits.png";
 
 interface Benefit {
   title: string;
@@ -86,7 +87,7 @@ const BenefitSections: React.FC = () => {
           <div>
             <div className="relative h-full min-h-64 md:min-h-80 rounded-xl overflow-hidden">
               <Image
-                src="https://images.pexels.com/photos/29500254/pexels-photo-29500254/free-photo-of-classic-station-clock-in-indoor-setting.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                src={Benefits}
                 alt="Affordable home appliance repair service"
                 width={1000}
                 height={1000}

@@ -2,6 +2,7 @@ import { CircleCheckBig } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import Button from "./Button";
+import About from "././../../public/about.png";
 
 // Feature item type definition
 interface FeatureItem {
@@ -29,11 +30,11 @@ const AboutSection: React.FC = () => {
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-12 items-center">
           {/* Image Content - takes 5/12 columns on large screens */}
           <div className="lg:col-span-5 w-full order-2 md:order-1">
-            <div className="overflow-hidden rounded-xl shadow-lg">
+            <div className="overflow-hidden rounded-xl">
               <div>
-                <div className="relative w-full h-0 pb-[100%] sm:pb-[80%]">
+                <div className="relative w-full h-0 pb-[100%]">
                   <Image
-                    src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    src={About}
                     alt="Technician repairing home appliances like washing machine and fridge"
                     fill
                     className="rounded-xl object-cover"
