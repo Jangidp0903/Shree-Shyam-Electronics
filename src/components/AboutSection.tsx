@@ -54,9 +54,9 @@ const AboutSection: React.FC = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl my-3 sm:my-4 md:my-6 text-gray-800 font-bold">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl my-3 sm:my-4 md:my-6 text-gray-800 font-bold">
               Trusted & Affordable Home Appliance Repair at Your Doorstep
-            </h1>
+            </h2>
 
             {/* Description */}
             <p className="text-sm md:text-base lg:text-lg font-medium text-gray-600">

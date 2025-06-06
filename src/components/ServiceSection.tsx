@@ -73,9 +73,9 @@ const ServiceCard: React.FC<ServiceItem> = ({ title, description, icon }) => {
       <div className="mx-auto text-center">{icon}</div>
 
       {/* Title */}
-      <h1 className="mt-4 md:mt-6 text-lg md:text-xl font-semibold text-gray-900">
+      <h3 className="mt-4 md:mt-6 text-lg md:text-xl font-semibold text-gray-900">
         {title}
-      </h1>
+      </h3>
 
       {/* Description */}
       <p className="text-xs sm:text-sm text-gray-600 mt-2 md:mt-4">
@@ -90,9 +90,9 @@ const ServiceSection: React.FC = () => {
     <section id="services" className="py-10 md:py-16">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">
           Expert Home Appliance Repair Services Near You
-        </h1>
+        </h2>
 
         {/* Badge */}
         <div className="mb-4 flex justify-center">
