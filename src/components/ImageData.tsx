@@ -1,5 +1,11 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import FridgeCooling from "../../public/FridgeCoolingIssue.png";
+import FridgeNotTurning from "../../public/FridgeNotTurning.png";
+import WashingRepair from "../../public/WashingMachineRepair.png";
+import WashingNoise from "../../public/WashingMachineNoise.png";
+import MicrowaveDoor from "../../public/MicrowaveDoor.png";
+import MicrowavePanel from "../../public/MicrowaveHeating.png";
 
 // Define types for our image cards
 interface ImageCardProps {
@@ -9,7 +15,7 @@ interface ImageCardProps {
 
 interface ImageCardType {
   id: number;
-  image: string;
+  image: string | StaticImageData;
   title: string;
   description: string;
   category?: string;
@@ -19,48 +25,42 @@ interface ImageCardType {
 const imageData: ImageCardType[] = [
   {
     id: 1,
-    image:
-      "https://images.pexels.com/photos/3736451/pexels-photo-3736451.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: FridgeCooling,
     title: "Fridge Cooling Issue",
     description:
       "We fix cooling problems, gas leaks, and compressor issues in all fridge models.",
   },
   {
     id: 2,
-    image:
-      "https://images.pexels.com/photos/4472073/pexels-photo-4472073.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: FridgeNotTurning,
     title: "Fridge Not Turning On",
     description:
       "Door seal issues, wiring faults, or thermostat repair — we've got you covered.",
   },
   {
     id: 3,
-    image:
-      "https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: WashingRepair,
     title: "Washing Machine Repair",
     description:
       "From drum not spinning to water leakage – we repair all models efficiently.",
   },
   {
     id: 4,
-    image:
-      "https://images.pexels.com/photos/3999778/pexels-photo-3999778.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: WashingNoise,
     title: "Washing Machine Noise Issue",
     description:
       "Strange noise? Vibration? We fix motor, bearings, and balance problems.",
   },
   {
     id: 5,
-    image:
-      "https://images.pexels.com/photos/6249723/pexels-photo-6249723.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: MicrowavePanel,
     title: "Microwave Heating Problem",
     description:
       "No heating or uneven heating? We fix magnetron, capacitor, and other issues.",
   },
   {
     id: 6,
-    image:
-      "https://images.pexels.com/photos/6617392/pexels-photo-6617392.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: MicrowaveDoor,
     title: "Microwave Door or Panel Repair",
     description:
       "We repair broken doors, buttons, panels, and provide genuine replacement parts.",
