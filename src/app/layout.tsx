@@ -12,10 +12,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Shree Shyam Electronics | Fridge, Washing Machine & Microwave Service",
+  title: "Shree Shyam | Fridge, Washing Machine & Microwave Service",
   description:
-    "Same-day, certified fridge repair, washing machine repair, and microwave repair in Gurugram. Affordable on-site appliance service with genuine parts and 24/7 support.",
+    "Get expert fridge, washing machine & microwave repair in Gurugram. Same-day service, genuine parts & affordable pricing—24/7 support available.",
   keywords: [
     "Gurugram appliance repair",
     "fridge repair Gurugram",
