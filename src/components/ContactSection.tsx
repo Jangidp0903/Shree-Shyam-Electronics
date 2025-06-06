@@ -9,7 +9,6 @@ interface ContactInfo {
   link?: string;
 }
 
-// Contact data with Lucide icons
 const contactData: ContactInfo[] = [
   {
     icon: Mail,
@@ -26,68 +25,59 @@ const contactData: ContactInfo[] = [
   {
     icon: MapPin,
     title: "Address",
-    value: "Gurugram Haryana",
+    value: "Sector 52, Wazirabad, Gurugram (HR), India",
   },
 ];
 
 const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="py-12 px-4 bg-gray-50 min-h-screen">
-      <div className="max-w-5xl mx-auto">
+    <section id="contact" className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-orange-600 mb-4">
             Need Fast Appliance Repair Service Near You?
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          <p className="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
             We&apos;d love to hear from you! Reach out to us for expert
             refrigerator repair, washing machine repair, microwave repair, and
-            other home appliance repair services.
+            other home appliance services.
           </p>
-          <div className="w-20 h-1 bg-orange-500 mx-auto mt-6"></div>
+          <div className="w-20 h-1 bg-orange-500 mx-auto mt-4" />
         </div>
 
-        {/* Contact Information Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {/* Contact Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {contactData.map((contact, index) => {
             const IconComponent = contact.icon;
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-orange-300 transition-all duration-300"
+                className="bg-white rounded-xl p-6 border border-orange-200"
               >
-                <div className="flex items-center mb-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mr-4">
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 flex items-center justify-center bg-orange-100 rounded-full mr-3">
                     <IconComponent size={20} className="text-orange-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-lg font-semibold text-orange-600">
                     {contact.title}
                   </h3>
                 </div>
-
                 {contact.link ? (
                   <a
                     href={contact.link}
-                    className="text-gray-600 hover:text-orange-600 transition-colors duration-200 block text-lg leading-relaxed"
-                    target={
-                      contact.link.startsWith("http") ? "_blank" : undefined
-                    }
-                    rel={
-                      contact.link.startsWith("http")
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
+                    className="text-gray-700 block hover:text-orange-400 transition-colors text-base"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {contact.value}
                   </a>
                 ) : contact.title.toLowerCase() === "address" ? (
-                  <address className="text-gray-600 not-italic text-lg leading-relaxed">
+                  <address className="text-gray-700 not-italic text-base">
                     {contact.value}
                   </address>
                 ) : (
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    {contact.value}
-                  </p>
+                  <p className="text-gray-700 text-base">{contact.value}</p>
                 )}
               </div>
             );
@@ -95,38 +85,32 @@ const ContactSection: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <section
-          className="mt-12 text-center"
-          aria-labelledby="start-conversation"
-        >
-          <div className="bg-white rounded-xl p-8 border-2 border-orange-100">
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
-              Ready to Start a Conversation About Your Appliance Repair Needs?
-            </h3>
-            <p className="text-gray-600 mb-6 text-sm sm:text-base px-4">
-              Whether it&apos;s your fridge, washing machine, or microwave — our
-              expert technicians are just a call or message away. Contact us
-              today for reliable, affordable, and same-day appliance repair
-              service at your doorstep.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="mailto:rajujangid65@gmail.com"
-                className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold text-sm sm:text-base w-full sm:w-auto text-center flex items-center justify-center gap-2"
-              >
-                <Mail size={18} />
-                Email Repair
-              </a>
-              <a
-                href="tel:+919873126033"
-                className="bg-orange-100 text-orange-600 px-6 py-3 rounded-lg font-semibold text-sm sm:text-base w-full sm:w-auto text-center border-2 border-orange-200 flex items-center justify-center gap-2"
-              >
-                <Phone size={18} />
-                Call Repair
-              </a>
-            </div>
+        <div className="bg-orange-50 border border-orange-200 rounded-xl p-8 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold text-orange-600 mb-4">
+            Ready to Start a Conversation About Your Appliance Repair Needs?
+          </h3>
+          <p className="text-gray-700 mb-6 text-sm sm:text-base max-w-2xl mx-auto">
+            Whether it&apos;s your fridge, washing machine, or microwave — our
+            expert technicians are just a call or message away. Contact us today
+            for reliable and same-day service.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a
+              href="mailto:rajujangid65@gmail.com"
+              className="bg-orange-500 text-white px-6 py-3 rounded-md font-medium text-sm sm:text-base w-full sm:w-auto text-center flex items-center justify-center gap-2"
+            >
+              <Mail size={18} />
+              Email Repair
+            </a>
+            <a
+              href="tel:+919873126033"
+              className="bg-white text-orange-600 border border-orange-500 px-6 py-3 rounded-md font-medium text-sm sm:text-base w-full sm:w-auto text-center flex items-center justify-center gap-2"
+            >
+              <Phone size={18} />
+              Call Repair
+            </a>
           </div>
-        </section>
+        </div>
       </div>
     </section>
   );
