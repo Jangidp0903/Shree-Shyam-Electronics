@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import { Metadata } from "next";
+import Script from "next/script"; // Import next/script for schema injection
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -68,8 +69,37 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Shree Shyam Electronics",
+    image: "https://shree-shyam-electronics.vercel.app/logo.png",
+    url: "https://shree-shyam-electronics.vercel.app",
+    telephone: "+91-9873126033",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Wazirabad",
+      addressLocality: "Gurugram",
+      addressRegion: "Haryana",
+      postalCode: "122002",
+      addressCountry: "IN",
+    },
+    openingHours: "Mo-Fr 09:00-20:00",
+    description:
+      "Expert repair of fridge, washing machine, and microwave in Gurugram with same-day service and certified technicians.",
+  };
+
   return (
     <html lang="en" className={dmSans.variable}>
+      <head>
+        {/* Inject JSON-LD schema */}
+        <Script
+          id="schema-local-business"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </head>
       <body className="antialiased font-sans">
         <Header />
         {children}
