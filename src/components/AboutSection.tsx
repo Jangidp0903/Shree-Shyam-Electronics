@@ -22,23 +22,21 @@ const AboutSection: React.FC = () => {
   ];
 
   return (
-    <section
-      id="about"
-      className="py-8 sm:py-12 md:py-16 bg-gray-100 overflow-hidden"
-    >
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-12 items-center">
-          {/* Image Content - takes 5/12 columns on large screens */}
-          <div className="lg:col-span-5 w-full order-2 md:order-1">
+    <section id="about" className="bg-gray-100 overflow-hidden">
+      <div className="container mx-auto">
+        <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-12 justify-end items-end">
+          {/* Image Content - Smaller width but taller height on mobile */}
+          <div className="lg:col-span-5 w-4/5 sm:w-3/5 md:w-5/12 lg:w-5/12 mx-auto md:mx-0 order-2 md:order-1">
             <div className="overflow-hidden rounded-xl">
               <div>
-                <div className="relative w-full h-0 pb-[100%]">
+                {/* Increased height: Mobile 120%, tablet 110%, desktop 100% */}
+                <div className="relative w-full h-0 pb-[120%] sm:pb-[110%] lg:pb-[100%]">
                   <Image
                     src={About}
                     alt="Technician repairing home appliances like washing machine and fridge"
                     fill
                     className="rounded-xl object-cover"
-                    sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
+                    sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 80vw"
                     priority
                   />
                 </div>
@@ -46,8 +44,8 @@ const AboutSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Text Content - takes 7/12 columns on large screens */}
-          <div className="lg:col-span-7 mt-6 md:mt-0 order-1 md:order-2">
+          {/* Text Content */}
+          <div className="lg:col-span-7 w-full md:w-7/12 lg:w-7/12 mt-4 p-4 md:p-6 lg:p-10 md:mt-0 order-1 md:order-2 px-4 sm:px-6">
             {/* Badge */}
             <div className="mb-3 sm:mb-4">
               <span className="inline-block text-xs sm:text-sm md:text-base rounded-lg font-bold text-white px-3 sm:px-4 py-1 bg-orange-500">
