@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Shree Shyam Electronics" }],
   robots: "index, follow",
   metadataBase: new URL("https://shree-shyam-electronics.vercel.app"),
+  alternates: {
+    canonical: "https://shree-shyam-electronics.vercel.app",
+  },
   openGraph: {
     title:
       "Shree Shyam Electronics | Fridge, Washing Machine & Microwave Service",
