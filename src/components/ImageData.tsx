@@ -7,21 +7,17 @@ import WashingNoise from "../../public/WashingMachineNoise.png";
 import MicrowaveDoor from "../../public/MicrowaveDoor.png";
 import MicrowavePanel from "../../public/MicrowaveHeating.png";
 
-// Define types for our image cards
-interface ImageCardProps {
-  image: ImageCardType;
-  index: number;
-}
-
 interface ImageCardType {
   id: number;
   image: string | StaticImageData;
   title: string;
   description: string;
-  category?: string;
 }
 
-// Enhanced image data with placeholder URLs
+interface ImageCardProps {
+  image: ImageCardType;
+}
+
 const imageData: ImageCardType[] = [
   {
     id: 1,
@@ -67,66 +63,56 @@ const imageData: ImageCardType[] = [
   },
 ];
 
-// ImageCard component with fixed square layout
 const ImageCard: React.FC<ImageCardProps> = ({ image }) => {
   return (
-    <div className="relative overflow-hidden rounded-xl cursor-pointer group bg-white border border-orange-100 transition-all duration-300">
-      {/* Square image container */}
-      <div className="w-full aspect-square overflow-hidden relative">
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors">
+      <div className="w-full aspect-square relative">
         <Image
           src={image.image}
-          alt={`${image.title} - Expert appliance repair service`}
+          alt={image.title}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
         />
       </div>
-
-      {/* Content overlay */}
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-4">
-        <div className="text-white">
-          <h3 className="font-bold text-lg mb-1">{image.title}</h3>
-          <p className="text-sm text-gray-200 mb-2">{image.description}</p>
-        </div>
+      <div className="p-4">
+        <h3 className="text-lg font-semibold text-gray-900 mb-1">
+          {image.title}
+        </h3>
+        <p className="text-sm text-gray-700 leading-relaxed">
+          {image.description}
+        </p>
       </div>
     </div>
   );
 };
 
-// Main Gallery Component
 const ImageGallery: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white">
+    <section className="bg-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b border-orange-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Affordable Fridge, Washing Machine & Microwave Repair Services at
-              Your Doorstep
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto rounded-full mb-4"></div>
-            <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              Fast and reliable appliance repair including refrigerator
-              compressor repair, washing machine motor noise fix, and microwave
-              door replacement. Book your technician online now!
-            </p>
-          </div>
-        </div>
-      </div>
+      <header className="max-w-4xl mx-auto text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
+          Affordable Fridge, Washing Machine & Microwave Repair Services at Your
+          Doorstep
+        </h2>
+        <p className="mt-4 text-gray-600 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+          Fast and reliable appliance repair including refrigerator compressor
+          repair, washing machine motor noise fix, and microwave door
+          replacement. Book your technician online now!
+        </p>
+      </header>
 
-      {/* Main content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Image Grid - 3 columns on desktop, 2 on tablet, 1 on mobile */}
-        <div className="bg-white rounded-xl shadow-sm border border-orange-100 p-6">
-          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {imageData.map((image, index) => (
-              <ImageCard key={image.id} image={image} index={index} />
-            ))}
-          </div>
+      {/* Grid */}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {imageData.map((item) => (
+            <ImageCard key={item.id} image={item} />
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
