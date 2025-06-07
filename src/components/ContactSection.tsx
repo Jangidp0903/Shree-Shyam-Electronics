@@ -13,7 +13,7 @@ const contactData: ContactInfo[] = [
   {
     icon: Mail,
     title: "Email",
-    value: "rajujangid65 [at] gmail [dot] com",
+    value: "rajujangid65@gmail.com",
     link: "mailto:rajujangid65@gmail.com",
   },
   {
