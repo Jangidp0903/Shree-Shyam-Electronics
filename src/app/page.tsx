@@ -6,6 +6,7 @@ import ServiceSection from "@/components/ServiceSection";
 import BenefitSections from "@/components/BenefitSections";
 import ImageData from "@/components/ImageData";
 import ContactSection from "@/components/ContactSection";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 const page = () => {
   return (
@@ -25,6 +26,9 @@ const page = () => {
 
         {/* Image Section */}
         <ImageData />
+
+        {/* Why Choose Us */}
+        <WhyChooseUs />
 
         {/* Contact Section */}
         <ContactSection />
